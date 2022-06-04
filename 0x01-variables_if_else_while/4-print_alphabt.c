@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * print the alphabet in lowercase,  q and e not included
- * Return: always 0 sucess
+ * Return: always 0 
  */
 
 	int main(void)
