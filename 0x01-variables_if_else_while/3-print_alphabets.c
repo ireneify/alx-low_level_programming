@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main -> assign a random numberto the variable n each time it is exercuted
- * and print the last digit of the number stored in the variable n
- * Return: Always 0 (Sucess)
+ *main -> assign a random numberto the variable n each time it is exercuted
+ *and print the last digit of the number stored in the variable n
+ *Return: Always 0 (Sucess)
  */
 int main(void)
 {
