@@ -1,10 +1,12 @@
 #include <stdio.h>
 /**
- *  prints all single digit numbers of base 10 starting from 0, followed by a new line.
- *  Return: Always 0
+ * main -> assign a random number to the variablen each time it is exercuted
+ * and print the last digit to the number stored in the variable n
+ * Return: Always 0
  */
 int main(void)
 {
+<<<<<<< HEAD
 	int n;
 	for( n=0; n>=10; n++ )
 	{
@@ -12,4 +14,13 @@ int main(void)
 	}
       	printf("\n");
 	return (0);
+=======
+int n;
+for (n = 0; n < 10; n++)
+{
+printf("%d\n", n);
+}
+printf("\n");
+return (0);
+>>>>>>> 7a8a802a64badbf5272d6057a6c8c50cd4df4ae6
 }
