@@ -2,9 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main-> assign a random number to the variable n each time it is executed 
+ * maon -> assign a randon number to a variable n each time it is exercuted 
  * and  print the last digit of the number stored in the variable n
- *
  * Return: Always (0) sucess
  */
 int main(void)
