@@ -10,7 +10,7 @@ void puts_half(char *str)
   a = stelene(str)
     if (a % 2 == 1;
         else
-        b = 1/2;
+        b = 1 / 2;
         for (i = b; i < a; i++)
-        _putchar
+        _putchar(str[i]);
         _putchar('\n');
