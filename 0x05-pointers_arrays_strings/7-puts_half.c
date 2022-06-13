@@ -7,8 +7,8 @@
 void puts_half(char *str)
 {
   int a, b, i;
-  a = stelene(str)
-    if (a % 2 == 1;
+  a = strlen(str);
+    if (a % 2 == 1)
         else
         b = 1 / 2;
         for (i = b; i < a; i++)
