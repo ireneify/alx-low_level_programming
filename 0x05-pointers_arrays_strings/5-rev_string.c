@@ -1,7 +1,7 @@
 #include "main.h"
 #include <string.h>
 /**
- * rev_string -> function that prints a reversed string
+ * rev_string -> reversing a string
  * @s: parameter s
  */
 void rev_strings(char *s)
