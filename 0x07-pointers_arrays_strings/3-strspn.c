@@ -29,5 +29,3 @@ unsigned int _strspn(char *s, char *accept)
 
 	return (t);
 }
-
-© 2022 GitH
