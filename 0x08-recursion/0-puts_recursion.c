@@ -1,12 +1,9 @@
 #include "main.h"
-
 /**
  *
- * * _puts_recursion -> this is a function to print string recursivly
- *
- * * @s: string paramenter
- *
- * */
+ * _puts_recursion -> this is a function to print string recursivl
+ * @s: string paramenter
+ */
 
 void _puts_recursion(char *s)
 
