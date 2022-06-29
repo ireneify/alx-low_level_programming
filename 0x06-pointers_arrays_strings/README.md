@@ -1,1 +1,1 @@
-My more pointer and string readme
+this is a readme on pointers and strings

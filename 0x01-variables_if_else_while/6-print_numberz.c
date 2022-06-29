@@ -10,15 +10,15 @@ int main(void)
 
 {
 
-	int ch;
+	int x;
 
-	for (ch = 48; ch <= 57; ch++)
+	for (x = 48; x <= 57; x++)
 
 	{
 
 
 
-		putchar(ch);
+		putchar(x);
 
 	}
 
