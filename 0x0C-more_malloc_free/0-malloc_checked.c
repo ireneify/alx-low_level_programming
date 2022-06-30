@@ -2,10 +2,6 @@
 
 #include <stdio.h>
 
-#include <stdlib.h>
-
-#include <limits.h>
-
 /**
  * malloc_checked - allocating memory using malloc in function
  * Return : pointer to allocated memory
