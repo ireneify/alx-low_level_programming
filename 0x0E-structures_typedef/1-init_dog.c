@@ -1,22 +1,23 @@
-#include <stdio.h>
-
+#include <stdlib.h>
 #include "dog.h"
 /**
- * print_dog - print atributes of dog struct
- * @d:dog struct
- * Return: no return
+ * init_dog - initialize a variable of type struct dog
+ * @d: array
+ * @name: name
+ * @age: age
+ * @owner: owner
+ * Description: This struct is for dog
  */
 
-void print_dog(struct dog *d)
+void init_dog(struct dog *d, char *name, float age, char *owner)
+{
+	if (d == NULL)
+		return;
 
-{ 
-	if (d != NULL)
+	else
 	{
-		printf("Name: %s\nAge: %f\nOwner: %s\n",
-				 d->name == NULL ? "(nil)" : d->name,
-				 d->age,
-				 d->owner == NULL ? "(nil)" : d->owner);
+		d->name = name;
+		d->age = age;
+		d->owner = owner;
 	}
 }
-
-
