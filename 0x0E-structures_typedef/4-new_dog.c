@@ -1,7 +1,5 @@
 #include <stdio.h>
-
 #include "dog.h"
-
 #include <stdlib.h>
 /**
  * new_dog - create new dog
@@ -10,15 +8,14 @@
  * @owner: char
  * Return: new dog
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
-
 {
 	char *name2;
 	char *owner2;
 	int n, o, i, j;
 	struct dog *luna;
 	luna = malloc(sizeof(struct dog));
+	
 	if (luna == NULL)
 		return (NULL);
 	for (n = 0; *(name + n) != '\0'; n++)
@@ -26,6 +23,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (o = 0; *(owner + o) != '\0'; o++)
 		;
 	name2 = malloc(n + 1);
+	
 	if (name2 != NULL)
 	{
 		for (i = 0; i <= n; i++)
