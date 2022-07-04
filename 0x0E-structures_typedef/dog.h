@@ -8,6 +8,7 @@ int _putchar(char c);
  * @owner: name of owner type char
  * Description: name, age and owner of a dog
  */
+
 typedef struct dog
 {
 	char *name;
