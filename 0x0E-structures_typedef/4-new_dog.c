@@ -10,6 +10,7 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	
 	char *name2;
 	char *owner2;
 	int n, o, i, j;
