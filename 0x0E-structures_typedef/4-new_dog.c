@@ -13,33 +13,33 @@ dog_t *new_dog(char *name, float age, char *owner)
 	
 	char *name2;
 	char *owner2;
-	int n, o, i, j;
+	int k, m, n, o;
 	struct dog *luna;
-	luna = malloc(sizeof(struct dog));
 	
+	luna = malloc(sizeof(struct dog));
 	if (luna == NULL)
 		return (NULL);
-	for (n = 0; *(name + n) != '\0'; n++)
+	for (k = 0; *(name + k) != '\0'; k++)
 		;
-	for (o = 0; *(owner + o) != '\0'; o++)
+	for (m = 0; *(owner + m) != '\0'; m++)
 		;
-	name2 = malloc(n + 1);
+	name2 = malloc(k + 1);
 	
 	if (name2 != NULL)
 	{
-		for (i = 0; i <= n; i++)
-			*(name2 + i) = *(name + i);
+		for (n = 0; n <= k; n++)
+			*(name2 + n) = *(name + n);
 	}
 	else
 	{
 		free(luna);
 		return (NULL);
 	}
-	owner2 = malloc(o + 1);
+	owner2 = malloc(k + 1);
 	if (owner2 != NULL)
 	{
-		for (j = 0; j <= o; j++)
-			*(owner2 + j) = *(owner + j);
+		for (o = 0; o <= m; o++)
+			*(owner2 + o) = *(owner + o);
 	}
 	else
 	{
