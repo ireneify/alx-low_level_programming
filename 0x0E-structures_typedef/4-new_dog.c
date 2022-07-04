@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /**
  * new_dog - create new dog
- *@name:char
+ * @name:char
  * @age:float
  * @owner: char
  * Return: new dog
@@ -51,6 +51,3 @@ dog_t *new_dog(char *name, float age, char *owner)
 	luna->owner = owner2;
 	return (luna);
 }
-
-
-
