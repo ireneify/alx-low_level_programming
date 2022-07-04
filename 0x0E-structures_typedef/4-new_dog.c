@@ -1,47 +1,45 @@
+
+
 #include <stdio.h>
 #include "dog.h"
 #include <stdlib.h>
 /**
  * new_dog - create new dog
- * @name:char
- * @age:float
- * @owner: char
+ *@name:char
+ *@age:float
+ *@owner: char
  * Return: new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	
 	char *name2;
 	char *owner2;
-	int k, m, n, o;
+	int n, o, i, j;
 	struct dog *luna;
-	
+
 	luna = malloc(sizeof(struct dog));
 	if (luna == NULL)
 		return (NULL);
-	for (k = 0; *(name + k) != '\0'; k++)
+	for (n = 0; *(name + n) != '\0'; n++)
 		;
-	for (m = 0; *(owner + m) != '\0'; m++)
+	for (o = 0; *(owner + o) != '\0'; o++)
 		;
-	name2 = malloc(k + 1);
-	
+	name2 = malloc(n + 1);
 	if (name2 != NULL)
 	{
-		for (n = 0; n <= k; n++)
-			*(name2 + n) = *(name + n);
-	}
-	else
+		for (i = 0; i <= n; i++)
+			*(name2 + i) = *(name + i);
+	} else
 	{
 		free(luna);
 		return (NULL);
 	}
-	owner2 = malloc(k + 1);
+	owner2 = malloc(o + 1);
 	if (owner2 != NULL)
 	{
-		for (o = 0; o <= m; o++)
-			*(owner2 + o) = *(owner + o);
-	}
-	else
+		for (j = 0; j <= o; j++)
+			*(owner2 + j) = *(owner + j);
+	} else
 	{
 		free(name2);
 		free(luna);
@@ -51,4 +49,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 	luna->age = age;
 	luna->owner = owner2;
 	return (luna);
+
 }
