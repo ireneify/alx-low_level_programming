@@ -2,7 +2,7 @@
 #include <stdarg.h>
 /**
  * sum_them_all - sum all integer given in variadic function
- * @an: number of argument
+ * @n: number of argument
  * Return: sum of reset of arguments
  */
 int sum_them_all(const unsigned int n, ...);
