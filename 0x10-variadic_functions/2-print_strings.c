@@ -1,46 +1,37 @@
+#include <stdarg.h>
 #include "variadic_functions.h"
 /**
- * print_string - print string followed by a new line
- * @seperators: string to be printed between strings
- * @n; number of argument passed 
- * Return: void
+ * print_strings - print strings
+ * @separator: string between the strings
+ * @n: number of parameters received
+ *
  */
-void print_strings(const char *separator, const unsigned int n, ...);
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
-	va_list params;
+	char *str;
 
+	va_list strings;
 
-	va_start(params, n);
-	if (n != 0)
+	va_start(strings, n);
+
+	for (i = 0 ; i < n ; i++)
 	{
-		for (i = 0; i < n; i++)
+		str =  va_arg(strings, char *);
+
+		if (str == NULL)
 		{
-			if (i != n - 1)
-			{
-				if (separator != NULL)
-					printf("%s%s", make_nil(va_arg(params, char *)), separator);
-				else
-					printf("%s", make_nil(va_arg(params, char *)));
-			}
-			else
-			{
-				printf("%s", make_nil(va_arg(params, char *)));
-			}
+			printf("%p", str);
+		}
+		else
+		{
+			printf("%s", str);
+		}
+		if (separator != NULL && i < n - 1)
+		{
+			printf("%s", separator);
 		}
 	}
+	va_end(strings);
 	printf("\n");
-	va_end(params);
-}
-
-/**
- * make_nil - change s to be "(nil)" if s is null
- * @s: string to be used
- * Return: pointer to @s
- */
-char *make_nil(char *s)
-{
-	if (s == NULL)
-		s = "(nil)";
-	return (s);
 }

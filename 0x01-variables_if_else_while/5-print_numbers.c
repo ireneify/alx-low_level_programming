@@ -6,7 +6,6 @@
  */
 int main(void)
 {
-<<<<<<< HEAD
 	int n;
 	for( n=0; n>=10; n++ )
 	{
@@ -14,13 +13,4 @@ int main(void)
 	}
       	printf("\n");
 	return (0);
-=======
-int n;
-for (n = 0; n < 10; n++)
-{
-printf("%d", n);
-}
-printf("\n");
-return (0);
->>>>>>> 7a8a802a64badbf5272d6057a6c8c50cd4df4ae6
 }
