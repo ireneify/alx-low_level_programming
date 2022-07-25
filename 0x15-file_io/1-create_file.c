@@ -1,4 +1,8 @@
 #include "main.h"
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 /**
  * _strlen - finds the length of a string
@@ -17,7 +21,7 @@ size_t _strlen(char *str)
 
 /**
  * create_file - creates a file.
- * @filename: name of the file to create
+ * @filename: filename to create
  * @text_content: NULL terminated string to write to the file
  *
  * Return: 1 on success, -1 on failure
