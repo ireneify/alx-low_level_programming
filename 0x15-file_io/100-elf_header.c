@@ -199,6 +199,8 @@ void elf_type(const unsigned char *buffer, int big_endian)
 	};
 	unsigned int type;
 	
+	printf("  %-34s ", "Type:");
+	
 	if (big_endian)
 		type = 0x100 * buffer[16] + buffer[17];
 	else
