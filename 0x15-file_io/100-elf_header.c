@@ -25,9 +25,10 @@ int _strncmp(const char *s1, const char *s2, size_t n)
 			return (1);
 		if (*s2)
 			return (-1);
-      }
-      return (0);
-   }
+	}
+	return (0);
+}
+
 /**
  * _close - close a file descriptor and print an error message upon failure
  * @fd: the file descriptor to close
@@ -65,7 +66,7 @@ void elf_magic(const unsigned char *buffer)
 
 	if (_strncmp((const char *) buffer, ELFMAG, 4))
 	{
-      	write(STDERR_FILENO, "Error: Not an ELF file\n", 23);
+		write(STDERR_FILENO, "Error: Not an ELF file\n", 23);
 		exit(98);
 	}
 
@@ -84,7 +85,8 @@ void elf_magic(const unsigned char *buffer)
 size_t elf_class(const unsigned char *buffer)
 {
 	printf("  %-34s ", "Class:");
-if (buffer[EI_CLASS] == ELFCLASS64)
+
+	if (buffer[EI_CLASS] == ELFCLASS64)
 	{
 		printf("ELF64\n");
 		return (64);
@@ -106,7 +108,7 @@ if (buffer[EI_CLASS] == ELFCLASS64)
  */
 int elf_data(const unsigned char *buffer)
 {
-printf("  %-34s ", "Data:");
+	printf("  %-34s ", "Data:");
 
 	if (buffer[EI_DATA] == ELFDATA2MSB)
 	{
@@ -125,8 +127,6 @@ printf("  %-34s ", "Data:");
 /**
  * elf_version - print ELF version
  * @buffer: the ELF header
- 
- * @buffer: the ELF header
  */
 void elf_version(const unsigned char *buffer)
 {
@@ -144,7 +144,7 @@ void elf_version(const unsigned char *buffer)
  */
 void elf_osabi(const unsigned char *buffer)
 {
-const char *os_table[19] = {
+	const char *os_table[19] = {
 		"UNIX - System V",
 		"UNIX - HP-UX",
 		"UNIX - NetBSD",
@@ -164,7 +164,7 @@ const char *os_table[19] = {
 		"FenixOS",
 		"Nuxi CloudABI",
 		"Stratus Technologies OpenVOS"
-    };
+	};
 
 	printf("  %-34s ", "OS/ABI:");
 
@@ -198,9 +198,9 @@ void elf_type(const unsigned char *buffer, int big_endian)
 		"CORE (Core file)"
 	};
 	unsigned int type;
-	
+
 	printf("  %-34s ", "Type:");
-	
+
 	if (big_endian)
 		type = 0x100 * buffer[16] + buffer[17];
 	else
@@ -214,8 +214,8 @@ void elf_type(const unsigned char *buffer, int big_endian)
 		printf("Processor Specific: (%4x)\n", type);
 	else
 		printf("<unknown: %x>\n", type);
-    }
-    
+}
+
 /**
  * elf_entry - print entry point address
  * @buffer: string containing the entry point address
@@ -232,7 +232,8 @@ void elf_entry(const unsigned char *buffer, size_t bit_mode, int big_endian)
 	{
 		while (address_size && !*(buffer))
 			--address_size, ++buffer;
-      printf("%x", *buffer & 0xff);
+
+		printf("%x", *buffer & 0xff);
 
 		while (--address_size > 0)
 			printf("%02x", *(++buffer) & 0xff);
@@ -251,7 +252,7 @@ void elf_entry(const unsigned char *buffer, size_t bit_mode, int big_endian)
 	}
 
 	printf("\n");
-  }
+}
 
 /**
  * main - copy a file's contents to another file
@@ -271,7 +272,7 @@ int main(int argc, const char *argv[])
 	{
 		write(STDERR_FILENO, "Usage: elf_header elf_filename\n", 31);
 		exit(98);
-    }
+	}
 
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
@@ -292,7 +293,8 @@ int main(int argc, const char *argv[])
 
 	lseek(fd, 24, SEEK_SET);
 	_read(fd, (char *) buffer, bit_mode / 8);
-  elf_entry(buffer, bit_mode, big_endian);
+
+	elf_entry(buffer, bit_mode, big_endian);
 
 	_close(fd);
 
