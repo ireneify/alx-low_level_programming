@@ -14,7 +14,8 @@ putchar(10);
 for (ch = 65; ch <= 90; ch++)
 {
 putchar(ch);
-}
 putchar(10); /*this is ascii code for newline*/
+}
+
 return (0);
 }
