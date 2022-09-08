@@ -1,18 +1,16 @@
+
+
 #include <stdio.h>
-
 #include "dog.h"
-
 #include <stdlib.h>
 /**
  * new_dog - create new dog
  *@name:char
- * @age:float
- * @owner: char
+ *@age:float
+ *@owner: char
  * Return: new dog
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
-
 {
 	char *name2;
 	char *owner2;
@@ -31,8 +29,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		for (i = 0; i <= n; i++)
 			*(name2 + i) = *(name + i);
-	}
-	else
+	} else
 	{
 		free(luna);
 		return (NULL);
@@ -42,8 +39,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		for (j = 0; j <= o; j++)
 			*(owner2 + j) = *(owner + j);
-	}
-	else
+	} else
 	{
 		free(name2);
 		free(luna);
@@ -53,7 +49,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 	luna->age = age;
 	luna->owner = owner2;
 	return (luna);
+
 }
-
-
-
